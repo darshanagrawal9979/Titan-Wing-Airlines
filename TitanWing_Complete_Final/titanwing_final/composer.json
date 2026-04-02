@@ -1,0 +1,10 @@
+{
+    "name": "titanwing/airlines",
+    "description": "Titan Wing Airlines Booking System",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {"TitanWing\\": "src/"}
+    }
+}

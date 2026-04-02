@@ -1,0 +1,82 @@
+-- TITAN WING — 40 International Flights
+-- Run in phpMyAdmin → titanwing_db → SQL tab
+
+-- DEL(1)→DXB(7) — 10 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI401',3,1,7,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL '02:40:00' HOUR_SECOND,220,18500,55000,110000,150,30,10,'international','scheduled'),
+('TWI402',3,1,7,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL '05:40:00' HOUR_SECOND,220,17500,52000,105000,150,30,10,'international','scheduled'),
+('TWI403',3,1,7,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '02:40:00' HOUR_SECOND,220,19000,57000,112000,150,30,10,'international','scheduled'),
+('TWI404',3,1,7,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL 14 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '17:40:00' HOUR_SECOND,220,17000,51000,102000,150,30,10,'international','scheduled'),
+('TWI405',3,1,7,DATE_ADD(CURDATE(),INTERVAL 4 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL '02:40:00' HOUR_SECOND,220,20000,60000,118000,150,30,10,'international','scheduled'),
+('TWI406',3,1,7,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL '05:40:00' HOUR_SECOND,220,18000,54000,108000,150,30,10,'international','scheduled'),
+('TWI407',3,1,7,DATE_ADD(CURDATE(),INTERVAL 6 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '02:40:00' HOUR_SECOND,220,21000,62000,122000,150,30,10,'international','scheduled'),
+('TWI408',3,1,7,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL 14 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '17:40:00' HOUR_SECOND,220,19500,58000,115000,150,30,10,'international','scheduled'),
+('TWI409',3,1,7,DATE_ADD(CURDATE(),INTERVAL 8 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '02:40:00' HOUR_SECOND,220,18500,55500,110000,150,30,10,'international','scheduled'),
+('TWI410',3,1,7,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '05:40:00' HOUR_SECOND,220,22000,65000,128000,150,30,10,'international','scheduled');
+
+-- DEL(1)→LHR(8) — 8 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI501',4,1,8,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 1 HOUR,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL '09:30:00' HOUR_SECOND,510,52000,140000,280000,200,40,12,'international','scheduled'),
+('TWI502',4,1,8,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL '06:30:00' HOUR_SECOND,510,54000,145000,290000,200,40,12,'international','scheduled'),
+('TWI503',4,1,8,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL 1 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '09:30:00' HOUR_SECOND,510,49000,132000,265000,200,40,12,'international','scheduled'),
+('TWI504',4,1,8,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 6 DAY)+INTERVAL '06:30:00' HOUR_SECOND,510,58000,155000,310000,200,40,12,'international','scheduled'),
+('TWI505',4,1,8,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL 1 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '09:30:00' HOUR_SECOND,510,55000,148000,295000,200,40,12,'international','scheduled'),
+('TWI506',4,1,8,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 10 DAY)+INTERVAL '06:30:00' HOUR_SECOND,510,51000,138000,275000,200,40,12,'international','scheduled'),
+('TWI507',4,1,8,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL 1 HOUR,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL '09:30:00' HOUR_SECOND,510,60000,160000,320000,200,40,12,'international','scheduled'),
+('TWI508',4,1,8,DATE_ADD(CURDATE(),INTERVAL 13 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 14 DAY)+INTERVAL '06:30:00' HOUR_SECOND,510,53000,142000,285000,200,40,12,'international','scheduled');
+
+-- DEL(1)→SIN(10) — 6 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI601',6,1,10,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL '07:30:00' HOUR_SECOND,330,32000,85000,160000,140,25,8,'international','scheduled'),
+('TWI602',6,1,10,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL 8 HOUR,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL '13:30:00' HOUR_SECOND,330,30000,80000,152000,140,25,8,'international','scheduled'),
+('TWI603',6,1,10,DATE_ADD(CURDATE(),INTERVAL 4 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL '07:30:00' HOUR_SECOND,330,34000,88000,168000,140,25,8,'international','scheduled'),
+('TWI604',6,1,10,DATE_ADD(CURDATE(),INTERVAL 6 DAY)+INTERVAL 8 HOUR,DATE_ADD(CURDATE(),INTERVAL 6 DAY)+INTERVAL '13:30:00' HOUR_SECOND,330,36000,92000,175000,140,25,8,'international','scheduled'),
+('TWI605',6,1,10,DATE_ADD(CURDATE(),INTERVAL 8 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '07:30:00' HOUR_SECOND,330,31000,82000,156000,140,25,8,'international','scheduled'),
+('TWI606',6,1,10,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL 8 HOUR,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL '13:30:00' HOUR_SECOND,330,35000,90000,172000,140,25,8,'international','scheduled');
+
+-- BOM(2)→DXB(7) — 6 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI701',3,2,7,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 3 HOUR,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL '05:55:00' HOUR_SECOND,175,16000,48000,95000,150,30,10,'international','scheduled'),
+('TWI702',3,2,7,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL 14 HOUR,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL '16:55:00' HOUR_SECOND,175,17500,52000,102000,150,30,10,'international','scheduled'),
+('TWI703',3,2,7,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL 3 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '05:55:00' HOUR_SECOND,175,15500,46000,92000,150,30,10,'international','scheduled'),
+('TWI704',3,2,7,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL 14 HOUR,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL '16:55:00' HOUR_SECOND,175,18000,54000,106000,150,30,10,'international','scheduled'),
+('TWI705',3,2,7,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL 3 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '05:55:00' HOUR_SECOND,175,16500,49000,98000,150,30,10,'international','scheduled'),
+('TWI706',3,2,7,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL 14 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '16:55:00' HOUR_SECOND,175,19000,56000,110000,150,30,10,'international','scheduled');
+
+-- BOM(2)→LHR(8) — 4 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI801',4,2,8,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL '11:00:00' HOUR_SECOND,540,58000,155000,310000,200,40,12,'international','scheduled'),
+('TWI802',4,2,8,DATE_ADD(CURDATE(),INTERVAL 4 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 4 DAY)+INTERVAL '11:00:00' HOUR_SECOND,540,62000,165000,325000,200,40,12,'international','scheduled'),
+('TWI803',4,2,8,DATE_ADD(CURDATE(),INTERVAL 8 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '08:00:00' HOUR_SECOND,540,55000,148000,295000,200,40,12,'international','scheduled'),
+('TWI804',4,2,8,DATE_ADD(CURDATE(),INTERVAL 12 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 12 DAY)+INTERVAL '11:00:00' HOUR_SECOND,540,60000,160000,318000,200,40,12,'international','scheduled');
+
+-- DEL(1)→JFK(9) — 4 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWI901',4,1,9,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL '18:00:00' HOUR_SECOND,960,72000,185000,360000,200,40,12,'international','scheduled'),
+('TWI902',4,1,9,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '18:00:00' HOUR_SECOND,960,75000,192000,375000,200,40,12,'international','scheduled'),
+('TWI903',4,1,9,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '18:00:00' HOUR_SECOND,960,70000,180000,350000,200,40,12,'international','scheduled'),
+('TWI904',4,1,9,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL 2 HOUR,DATE_ADD(CURDATE(),INTERVAL 11 DAY)+INTERVAL '18:00:00' HOUR_SECOND,960,78000,198000,385000,200,40,12,'international','scheduled');
+
+-- DEL(1)→BKK(11) — 4 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWIA01',2,1,11,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL 6 HOUR,DATE_ADD(CURDATE(),INTERVAL 0 DAY)+INTERVAL '10:30:00' HOUR_SECOND,270,22000,62000,120000,126,18,6,'international','scheduled'),
+('TWIA02',2,1,11,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 3 DAY)+INTERVAL '02:30:00' HOUR_SECOND,270,24000,66000,128000,126,18,6,'international','scheduled'),
+('TWIA03',2,1,11,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL 6 HOUR,DATE_ADD(CURDATE(),INTERVAL 5 DAY)+INTERVAL '10:30:00' HOUR_SECOND,270,21000,60000,116000,126,18,6,'international','scheduled'),
+('TWIA04',2,1,11,DATE_ADD(CURDATE(),INTERVAL 8 DAY)+INTERVAL 22 HOUR,DATE_ADD(CURDATE(),INTERVAL 9 DAY)+INTERVAL '02:30:00' HOUR_SECOND,270,25000,68000,132000,126,18,6,'international','scheduled');
+
+-- BOM(2)→SIN(10) — 2 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWIB01',6,2,10,DATE_ADD(CURDATE(),INTERVAL 1 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL '04:00:00' HOUR_SECOND,300,28000,75000,145000,140,25,8,'international','scheduled'),
+('TWIB02',6,2,10,DATE_ADD(CURDATE(),INTERVAL 6 DAY)+INTERVAL 23 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '04:00:00' HOUR_SECOND,300,30000,80000,155000,140,25,8,'international','scheduled');
+
+-- BLR(3)→DXB(7) — 2 flights
+INSERT INTO flights (flight_number,aircraft_id,origin_id,destination_id,departure_time,arrival_time,duration_minutes,economy_price,business_price,first_class_price,available_economy,available_business,available_first,flight_type,status) VALUES
+('TWIC01',3,3,7,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL 4 HOUR,DATE_ADD(CURDATE(),INTERVAL 2 DAY)+INTERVAL '07:30:00' HOUR_SECOND,210,17000,50000,98000,150,30,10,'international','scheduled'),
+('TWIC02',3,3,7,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL 4 HOUR,DATE_ADD(CURDATE(),INTERVAL 7 DAY)+INTERVAL '07:30:00' HOUR_SECOND,210,18500,54000,105000,150,30,10,'international','scheduled');
+
+-- Total check
+SELECT flight_type, COUNT(*) AS total FROM flights WHERE departure_time > NOW() AND is_active=1 GROUP BY flight_type;
+SELECT o.code AS `from`, d.code AS `to`, COUNT(*) AS flights, MIN(f.economy_price) AS from_price
+FROM flights f JOIN airports o ON f.origin_id=o.id JOIN airports d ON f.destination_id=d.id
+WHERE f.flight_type='international' AND f.departure_time > NOW() AND f.is_active=1
+GROUP BY f.origin_id, f.destination_id ORDER BY flights DESC;

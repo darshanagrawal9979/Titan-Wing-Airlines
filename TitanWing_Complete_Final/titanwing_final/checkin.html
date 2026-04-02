@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Online Check-in — Titan Wing Airlines</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-icon">✈</div>
+    <div><span class="logo-text">Titan Wing</span><span class="logo-sub">AIRLINES</span></div>
+  </a>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="index.html#search">Search Flights</a>
+    <a href="pages/dashboard.php">My Bookings</a>
+    <a href="checkin.html" class="active">Check-in</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="nav-actions">
+    <div id="nav-auth-area"></div>
+  </div>
+</header>
+
+<div style="background:linear-gradient(135deg,var(--navy),#1a3a5c);padding:60px 2rem;text-align:center;color:#fff">
+  <h1 style="font-family:var(--font-display);font-size:2.5rem;font-weight:900;margin-bottom:12px">Online Check-in</h1>
+  <p style="color:rgba(255,255,255,.7);font-size:1.1rem">Check in online 48 hours to 1 hour before departure</p>
+</div>
+
+<div style="max-width:600px;margin:40px auto;padding:0 2rem">
+  <div style="background:white;border-radius:16px;padding:32px;border:1.5px solid #e0ddd8;margin-bottom:20px">
+    <h2 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:20px">Enter Your Booking Reference</h2>
+    <div style="display:flex;gap:12px">
+      <input type="text" id="ci-ref" placeholder="e.g. TWB84BE8DE" maxlength="15"
+        style="flex:1;padding:13px 16px;border:1.5px solid #ddd;border-radius:10px;font-size:15px;font-family:monospace;text-transform:uppercase;outline:none">
+      <button onclick="doCheckin()" class="btn-gold" style="padding:13px 24px;white-space:nowrap">Check In</button>
+    </div>
+    <p style="font-size:12px;color:var(--gray-400);margin-top:10px">Find your booking reference in your confirmation email</p>
+    <div id="checkin-result" style="margin-top:16px"></div>
+  </div>
+
+  <div style="background:white;border-radius:16px;padding:24px;border:1.5px solid #e0ddd8">
+    <h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:14px">Check-in Information</h3>
+    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+      <li style="display:flex;gap:10px;font-size:13px;color:var(--gray-500)"><span style="color:var(--gold);font-weight:700">✓</span> Opens 48 hours before departure</li>
+      <li style="display:flex;gap:10px;font-size:13px;color:var(--gray-500)"><span style="color:var(--gold);font-weight:700">✓</span> Closes 1 hour before departure</li>
+      <li style="display:flex;gap:10px;font-size:13px;color:var(--gray-500)"><span style="color:var(--gold);font-weight:700">✓</span> Boarding pass emailed automatically</li>
+      <li style="display:flex;gap:10px;font-size:13px;color:var(--gray-500)"><span style="color:var(--gold);font-weight:700">✓</span> Please carry a valid government-issued photo ID</li>
+    </ul>
+  </div>
+</div>
+
+<div class="loading-overlay" id="loading-overlay"><div class="spinner"></div><div class="loading-text">Processing...</div></div>
+<div class="toast-container" id="toast-container"></div>
+<script src="js/main.js?v=20260320"></script>
+</body>
+</html>
